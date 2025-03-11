@@ -12,10 +12,6 @@ export default function Home() {
             Dynamic Form Application
           </h1>
         </div>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Create and manage dynamic form fields with real-time validation.
-          Submit the form to see the values displayed below.
-        </p>
       </div>
       <DynamicForm />
     </div>

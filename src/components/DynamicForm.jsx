@@ -105,7 +105,8 @@ const DynamicForm = () => {
   // Return loading state during server-side rendering or before client-side hydration
   if (!isMounted) {
     return (
-      <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md flex items-center justify-center h-64">
+      <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md flex flex-col lg:flex-row items-center justify-center h-auto lg:h-64">
+
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading form...</p>
@@ -134,7 +135,8 @@ const DynamicForm = () => {
               </span>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col lg:flex-row items-start gap-4">
+
               <div className="flex-1">
                 <div className="relative">
                   <div className="flex items-center mb-2">
@@ -162,7 +164,7 @@ const DynamicForm = () => {
                 </div>
               </div>
 
-              <div className="flex-1">
+             <div className="flex-1">
                 <div className="relative">
                   <div className="flex items-center mb-2">
                     <IoMdOptions className="text-gray-500 mr-2" />
@@ -174,7 +176,7 @@ const DynamicForm = () => {
                     name="select"
                     value={field.select}
                     onChange={(e) => handleInputChange(index, e)}
-                    className={`w-full p-3 border rounded-md appearance-none focus:ring-2 focus:ring-blue-300 focus:outline-none transition-all ${
+                    className={`lg:w-full w-[212px] p-3 border rounded-md appearance-none focus:ring-2 focus:ring-blue-300 focus:outline-none transition-all ${
                       errors[index].select
                         ? "border-red-500"
                         : "border-gray-300"
@@ -199,7 +201,7 @@ const DynamicForm = () => {
               <button
                 type="button"
                 onClick={() => deleteField(index)}
-                className="p-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all hover:shadow-md flex items-center"
+                className="p-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-all hover:shadow-md flex items-center lg:mt-8"
                 disabled={formFields.length === 1}
               >
                 <FiTrash2 className="mr-1" />
@@ -209,13 +211,13 @@ const DynamicForm = () => {
           </div>
         ))}
 
-        <div className="flex gap-4 mt-6">
+        <div className="flex gap-2 lg:gap-4 mt-6">
           <button
             type="button"
             onClick={addField}
-            className="p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all hover:shadow-md flex items-center"
+            className="p-1 lg:p-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all hover:shadow-md flex items-center"
           >
-            <FiPlus className="mr-2" />
+            <FiPlus className="mr-2 " />
             Add Field
           </button>
 
@@ -303,3 +305,7 @@ const DynamicForm = () => {
 };
 
 export default DynamicForm;
+
+
+
+// -----------------------------
