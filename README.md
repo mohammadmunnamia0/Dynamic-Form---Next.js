@@ -1,24 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dynamic Form Application
+
+A Next.js application that demonstrates a dynamic form with validation and state management.
+
+## Features
+
+- Dynamic form with input fields and select boxes
+- Field validation with error messages
+- Ability to add and remove form field rows
+- Form state display in a table format
+- Responsive design with Tailwind CSS
+
+## Requirements
+
+- Node.js 18.17 or later
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository and install the dependencies:
+
+```bash
+git clone <repository-url>
+cd 6sense-form-app
+npm install
+# or
+yarn install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/page.js` - The main page component
+- `src/components/DynamicForm.js` - The dynamic form component with all the functionality
+- `src/app/globals.css` - Global styles
+
+## Form Functionality
+
+The form includes:
+
+1. Input fields and select boxes side by side
+2. Validation for required fields
+3. Error messages displayed below each field
+4. A "+" button to add new field rows
+5. Delete buttons to remove field rows
+6. Form state display in a table format
+
+## Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- JavaScript
 
 ## Learn More
 
